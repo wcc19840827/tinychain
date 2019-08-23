@@ -19,6 +19,24 @@ tinychain是一个业余的项目，旨在为大家提供微型的简单易懂�
 * sqlite3 (apt-get install libsqlite3-dev / brew install sqlite3)
 * cryptopp (apt-get install libcryptopp-dev / brew install cryptopp)
 
+## centos安装gcc6
+```
+#安装scl
+$ sudo yum install centos-release-scl
+#安装想要的gcc版本，如gcc6
+$ sudo yum install devtoolset-6
+#安装g++
+sudo yum install devtoolset-6-gcc-c++
+上面会将新版的 gcc 与 g++ 安装在 /opt/rh/devtoolset-6/root/bin 目录下
+
+指定新安装的gcc的路径
+cmake -DCMAKE_CXX_COMPILER=/opt/rh/devtoolset-6/root/bin/g++ ..
+
+yum install cryptopp
+yum install cryptopp-devel
+yum install sqlite-devel
+```
+
 ## 构建 Build
 On workpath of tinychain:
 ```
